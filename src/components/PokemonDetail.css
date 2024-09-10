@@ -1,0 +1,97 @@
+
+body {
+  margin: 0; padding: 0; display: flex; justify-content: center; align-items: center;
+  min-height: 100vh; background: #e0f7fa; transition: background-color 0.3s ease-in-out; 
+}
+
+.pokemon-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1));
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.pokemon-detail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.2));
+}
+
+.pokemon-detail h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.5s infinite;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.pokemon-detail:hover h1 {
+  color: #ffeb3b; /* Change color on hover */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.pokemon-detail img {
+  width: 220px; height: 220px; object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.pokemon-detail img:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-color: #ffeb3b; 
+}
+
+.pokemon-detail p {
+  font-size: 1.4rem; margin: 10px 0; color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 1s ease-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.pokemon-detail p:hover {
+  color: #ffeb3b; 
+}
+
+@media (max-width: 600px) {
+  .pokemon-detail {
+    padding: 15px; max-width: 90%;
+  }
+
+  .pokemon-detail img {
+    width: 180px; height: 180px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

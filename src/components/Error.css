@@ -1,0 +1,10 @@
+src/components/Error.css
+.error {
+    color: red;
+    font-size: 1.2em;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: #fdd;
+    border-radius: 5px;
+  }
+  
